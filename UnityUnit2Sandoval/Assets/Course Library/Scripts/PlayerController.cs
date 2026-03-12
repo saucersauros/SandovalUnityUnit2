@@ -12,20 +12,18 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         vi = Input.GetAxis("Vertical");
+
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         transform.Translate(Vector3.forward * vi * Time.deltaTime * speed);
-        if (transform.position.x < -xrange)
-        {
-            transform.position = new Vector3(-xrange, transform.position.y, transform.position.z);
-        }
-        if (transform.position.x > xrange)
-        {
-            transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(food, transform.position, food.transform.rotation);
 
-        }
+        if (transform.position.x < -xrange)
+            transform.position = new Vector3(-xrange, transform.position.y, transform.position.z);
+
+        if (transform.position.x > xrange)
+            transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            Instantiate(food, transform.position, food.transform.rotation);
     }
+
 }
