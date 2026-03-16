@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 7971281241999331215}
   - component: {fileID: 2627712442958818313}
   - component: {fileID: 9048593758587834014}
-  - component: {fileID: 6992516691151429549}
   - component: {fileID: 1433449575860312855}
   - component: {fileID: 6226712489126541331}
   - component: {fileID: 442520712574032846}
-  - component: {fileID: 5591344863607647111}
+  - component: {fileID: -51269551347078717}
   m_Layer: 0
   m_Name: Wine 1
   m_TagString: Food
@@ -91,19 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6992516691151429549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062573101932431460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3aed267bef98ec46a21ddf4e81e2d93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 40
 --- !u!114 &1433449575860312855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,15 +150,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5591344863607647111
+--- !u!114 &-51269551347078717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062573101932431460}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 027e7375cf4cbe144a7af05500797866, type: 3}
+  m_Script: {fileID: 11500000, guid: d8178b70c96fdf444b5bf495e97741d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 40
