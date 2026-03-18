@@ -3,13 +3,21 @@ using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
-    public Text text;
-    public int poop;
+    private int score = 0; 
+    private int lives = 3;
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        text.text = "score" + poop;
+    public void AddLives(int value) 
+    { 
+        lives += value; 
+        if (lives <= 0)     
+        { 
+            Debug.Log("Game Over"); 
+            lives = 0; 
+        } 
+        Debug.Log("Lives = " + lives);
+    }
+    public void AddScore(int value) 
+    { 
+        score += value; Debug.Log("Score = " + score); 
     }
 }

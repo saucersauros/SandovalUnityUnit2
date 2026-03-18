@@ -2,19 +2,39 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    private float top = 30;
-    private float bot = -10;
+    private float topBound = 30; 
+    private float lowerBound = 110; 
+    private float sideBound = 30;
+    private GameManager1 gameManager;
+
+    void Start() 
+    { 
+        gameManager = GameObject.Find("GameManager1").GetComponent<GameManager1>(); 
+    }
 
 
     void Update()
     {
-        if (transform.position.z > top)
+        // If an object goes past the players view in the game, remove that object
+        if (transform.position.z > topBound)
         {
             Destroy(gameObject);
-        } else if (transform.position.z < bot)
+        }
+        else if (transform.position.z < lowerBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
+            Destroy(gameObject);
+        }
+        else if (transform.position.x > sideBound)
+        {
+            gameManager.AddLives(-1);
+            Destroy(gameObject);
+        }
+        else if (transform.position.x < -sideBound)
+        {
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
     }
 }
+
